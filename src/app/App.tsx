@@ -1,18 +1,18 @@
 import {useTheme} from "shared/lib/useTheme/useTheme";
-import {ThemeSwitcher} from "features/ThemeSwitcher";
 import {classNames} from "shared/lib/classNames/classNames";
+import {AppRouter} from "./providers/AppRouter";
+import {Header} from "widgets/Header";
+import {SideBar} from "widgets/SideBar";
 import './styles/index.scss'
 
 const App = () => {
     const {theme} = useTheme();
     return (
         <div className={classNames('app', {}, [theme])}>
-            <div>HEADER</div>
+            <Header />
             <div className='wrapper'>
-                <div>
-                    <ThemeSwitcher/>
-                </div>
-                <div>MAIN</div>
+                <SideBar />
+                <AppRouter />
             </div>
         </div>
     );

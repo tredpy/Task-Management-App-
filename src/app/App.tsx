@@ -1,9 +1,15 @@
-import './reset.scss'
-import s from './App.module.scss'
+import {useTheme} from "shared/lib/useTheme/useTheme";
+import './styles/index.scss'
+
 const App = () => {
+    const { theme } = useTheme();
     return (
-        <div>
-            <button className={s.btn}>QQQ</button>
+        <div className='app'>
+            <div>HEADER</div>
+            <div className='wrapper'>
+                <div>SIDEBAR</div>
+                <div>MAIN</div>
+            </div>
         </div>
     );
 };

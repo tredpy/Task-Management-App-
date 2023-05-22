@@ -9,8 +9,11 @@ export const Header = ({ className }: HeaderProps) => {
     return (
         <div className={classNames(s.Header, {}, [className])}>
             <div className={s.links}>
-                <AppLink theme={'primary'} to="/">
-                    Главная
+                <AppLink theme={'primary'} to="/help" className={s.profile}>
+                    Помощь
+                </AppLink>
+                <AppLink theme={'primary'} to="/notifications" className={s.profile}>
+                    Уведомления
                 </AppLink>
                 <AppLink theme={'primary'} to="/profile" className={s.profile}>
                     Профиль

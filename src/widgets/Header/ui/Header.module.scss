@@ -13,3 +13,7 @@
 .profile {
     margin-left: 20px;
 }
+
+.profile:first-child {
+    margin-left: 0;
+}
